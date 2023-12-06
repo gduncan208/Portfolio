@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 :root {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Cabin', sans-serif;
     color: #E2DADB;
 }
 
@@ -133,10 +133,29 @@ main {
     align-items: center;
     flex-flow: row wrap;
 } 
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 main img {
     display: flex;
     margin: .5em .5em;
     box-shadow: 2px 2px 5px #282a2c;
+    transition: .8s;
+}
+
+
+img:hover {
+   transform: scale(1.05);
+   position: relative;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
 }
 
 
@@ -331,8 +350,9 @@ main img {
 
 
 }
+
  
-.fishing2 {
+/* .fishing2 {
     display: none;
 }
 
@@ -346,11 +366,11 @@ main img {
 
 .mtn-painting2 {
     display: none;
-}
+} */
 
 
 @media only screen and (max-width: 850px) {
-    .fishing1 {
+    /* .fishing1 {
         display: none;
     }
 
@@ -380,7 +400,7 @@ main img {
 
     .mtn-painting2 {
         display: flex;
-    }
+    } */
 }
 
 
