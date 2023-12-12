@@ -300,7 +300,7 @@ img:hover {
 
 }
 
-.fishing2 {
+.fishing600, .fishing500 {
     display: none;
 }
 
@@ -318,11 +318,11 @@ img:hover {
 
 
 @media only screen and (max-width: 800px) {
-    .fishing1 {
+    .fishing800 {
         display: none;
     }
 
-    .fishing2 {
+    .fishing600 {
         display: flex;
     }
 
@@ -336,8 +336,30 @@ img:hover {
 
 }
 
+@media only screen and (max-width: 550px) {
+    .rainier800, .rainier600 {
+        display: none;
+    }
+
+    .rainier500 {
+        display: flex;
+    }
+
+    .fishing800, .fishing600 {
+        display: none;
+    }
+
+    .fishing500 {
+        display: flex;
+    }
+}
 
  /*ABOUT ME PAGE*/
+
+ .me {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #282a2c;
+ }
 
 
 .about {
@@ -418,7 +440,7 @@ img:hover {
 .contact {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 }
