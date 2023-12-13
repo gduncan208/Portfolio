@@ -76,7 +76,7 @@ ul {
     margin-left: 15px;
 }
 
-#emphasis {
+.emphasis {
     font-weight: bold;
     padding: .5em 0;
     margin: 0;
@@ -94,6 +94,7 @@ ul {
 
 a:hover, .emphasis  {
    color: #80D39B;
+   transition: .4s ease-in;
 }
 
 #social-media {
@@ -151,6 +152,7 @@ a:hover, .emphasis  {
 
 body { 
     display: flex;
+    justify-content: baseline;
     background-color: #3a3d3f;
     height: 100%;
     width: 100;
@@ -194,9 +196,17 @@ img:hover {
     align-items: flex-start;
 }
 
-
+/* Navbar phone */
 @media screen and (max-width: 850px) {
-  
+
+    body {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+    }
+
     nav {
         display: flex;
         flex-direction: column;
@@ -215,6 +225,7 @@ img:hover {
         position: fixed;
         z-index: 5;
     }
+
     .mobile-wrapper {
         position: absolute;
         display: flex;
@@ -224,6 +235,7 @@ img:hover {
         height: 80px;
         margin-top: 20px;
     }
+
     .ham-lines {
         position:absolute;
         display: flex;
@@ -267,20 +279,45 @@ img:hover {
         position: fixed;
         z-index: 10;
     }
+}
 
     /* Hamburger Menu Animation */
-    
-  
-    main {
-        margin: 0;
-        margin-top: 60px;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+
+.ham-lines,
+.ham-lines::before,
+.ham-lines::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.ham-lines::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.ham-lines::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#toggle:checked + .mobile-wrapper .ham-lines::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#toggle:checked + .mobile-wrapper .ham-lines{
+  background: rgba(255, 255, 255, 0);
+}
+
+#toggle:checked + .mobile-wrapper .ham-lines::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
 
     section {
         width: 95%;
@@ -295,10 +332,10 @@ img:hover {
         align-items: center;
         flex-wrap: wrap ;
         width: 95vw;
-    }
-
-
 }
+
+
+
 
 .fishing600, .fishing500 {
     display: none;
@@ -308,14 +345,19 @@ img:hover {
     display: none;
 }
 
-.frog2 {
-    display: none;
-}
-
-.mtn-painting2 {
+.mtnpainting389, .mtnpainting520, .mtnpainting325 {
     display: none;
 } 
 
+@media only screen and (max-width: 1296px) {
+    .mtnpainting1040, .mtnpainting389, .mtnpainting325 {
+        display: none;
+    }
+
+    .mtnpainting520 {
+        display: flex;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     .fishing800 {
@@ -331,6 +373,14 @@ img:hover {
     }
 
     .rainier600 {
+        display: flex;
+    }
+
+    .mtnpainting1040, .mtnpainting520, .mtnpainting325 {
+        display: none;
+    }
+
+    .mtnpainting389 {
         display: flex;
     }
 
@@ -352,6 +402,18 @@ img:hover {
     .fishing500 {
         display: flex;
     }
+
+    .mtnpainting1040, .mtnpainting520, .mtnpainting389 {
+        display: none;
+    }
+
+    .mtnpainting325 {
+        display: flex;
+    }
+}
+
+.rainier-sec {
+ cursor: pointer;
 }
 
  /*ABOUT ME PAGE*/
@@ -445,7 +507,7 @@ img:hover {
     width: 100%;
 }
 
-.contact ul{
+ul.contact {
     padding: 0;
     margin: 0;
 }
@@ -459,9 +521,4 @@ img:hover {
     border-radius: 10px;
     box-shadow: 2px 2px 5px #282a2c;
     margin: .5em;
-    transition: .5s;
-}
-
-.contact li:hover {
-    transform: scale(1.05);
 }
