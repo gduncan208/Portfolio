@@ -53,27 +53,14 @@ nav {
 
 
 .logo {
-    background-color: #80D39B;
-    padding: 1em;
-}
-
-.name {
-    margin-bottom: -10px;
+    padding: 0;
+    height: 100px;
+    width: 100px;
+    
 }
 
 ul {
     list-style: none;
-}
-
-
-.nav-items {
-    padding: 5px 0;
-    margin-right: 25px;
-}
-
-.nav-items li {
-    padding: .5em 0;
-    margin-left: 15px;
 }
 
 .emphasis {
@@ -88,22 +75,25 @@ ul {
     color: #E2DADB;
 }
 
+.nav-items {
+
+    padding: 0;
+    margin: -50 0 0;
+}
+
 .on a {
-    color: #80D39B;
+    color: #F36F21;
 }
 
 a:hover, .emphasis  {
-   color: #80D39B;
+   color: #F36F21;
    transition: .4s ease-in;
 }
 
-#social-media {
+.social-media {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -1em;
-    margin-right: 8em;
-    padding: 1em 0 0 112px;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .social {
@@ -112,11 +102,11 @@ a:hover, .emphasis  {
 }
 
 .social:hover {
-    fill: #80D39B;
+    fill: #F36F21;
 }
 
 .contact-btn {
-    background-color: #80D39B;
+    background-color:#F36F21;
     color: #36393B;
     padding: .6rem .8rem;
     border-radius: 10px;
@@ -143,7 +133,7 @@ a:hover, .emphasis  {
 }
 
 .jump a:hover{
-    color: #80D39B;
+    color: #F36F21;
 }
 
 
@@ -498,7 +488,7 @@ main img {
 }
 
 .code-svg {
-    stroke: #80D39B;
+    stroke:  #F36F21;
     align-self: center;
 }
 
