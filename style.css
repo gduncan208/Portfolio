@@ -123,7 +123,7 @@ a:hover, .emphasis  {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0;
     width: 100%;
 }
 
@@ -445,7 +445,7 @@ main img {
     display: block;
     height: auto;
     min-width: 200px;
-    max-width: 500px;
+    max-width: 400px;
     min-width: 300px;
     margin: 1em;
     line-height: 24px;
@@ -518,4 +518,9 @@ ul.contact {
     border-radius: 10px;
     box-shadow: 2px 2px 5px #282a2c;
     margin: .5em;
+}
+
+.blog-post {
+    width: 60%;
+    block-size: fit-content;
 }
