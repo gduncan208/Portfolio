@@ -339,6 +339,10 @@ main img {
     display: none;
 } 
 
+.b-img-300 {
+    display: none;
+}
+
 @media only screen and (max-width: 1296px) {
     .mtnpainting1040, .mtnpainting389, .mtnpainting325 {
         display: none;
@@ -346,6 +350,10 @@ main img {
 
     .mtnpainting520 {
         display: flex;
+    }
+
+    .b-img-300 {
+        display: none;
     }
 }
 
@@ -374,6 +382,10 @@ main img {
         display: flex;
     }
 
+    .b-img-300 {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -398,6 +410,13 @@ main img {
     }
 
     .mtnpainting325 {
+        display: flex;
+    }
+    .b-img {
+        display: none;
+    }
+
+    .b-img-300 {
         display: flex;
     }
 }
@@ -520,7 +539,18 @@ ul.contact {
     margin: .5em;
 }
 
-.blog-post {
-    width: 60%;
+.blog {
+   align-items: flex-start;
+}
+
+.b-img {
+    align-self: center;
+    justify-self: center;
+}
+
+.blog-post, .blog-post-2 {
+    gap: 4rem;
+    width: 95vw;
+    max-width: 600px;
     block-size: fit-content;
 }
